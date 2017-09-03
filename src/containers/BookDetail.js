@@ -14,14 +14,13 @@ class BookDetail extends Component {
       )
     }
     return (
-      <div className="col-md-4">
-        <h3> Details for: </h3>
-        <h4 className="title">{this.props.book.title}</h4>
-        <div>{this.props.book.pages} pages</div>
-        <div>Author: {this.props.book.author}</div>
-        <div>Price: ${this.props.book.price} USD</div>
-        <div>Published: {this.props.book.published_date} by {this.props.book.publisher}</div>
-        <div>Genre: {this.props.book.category.join(", ")} </div>
+      <div className="container col-md-8 bookDetails">
+        <h4 className="display-4">{this.props.book.title}</h4>
+        <div className="lead">{this.props.book.pages} pages</div>
+        <div className="lead"><strong>Author:</strong> {this.props.book.author}</div>
+        <div className="lead"><strong>Price:</strong> ${this.props.book.price} USD</div>
+        <div className="lead"><strong>Published:</strong> {this.props.book.published_date} by {this.props.book.publisher}</div>
+        <div className="lead"><strong>Genre:</strong> {this.props.book.category.join(", ")} </div>
       </div>
     );
   }
